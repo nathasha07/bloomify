@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomify - Mental Fitness</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F7F7FC;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #8F87F1;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        /* Sections with different background colors */
+        #home { background-color: #8F87F1; color: white; }
+        #mood { background-color: #C68EFD; color: white; }
+        #social { background-color: #E9A5F1; color: white; }
+        #parent { background-color: #FED2E2; color: black; }
+
+        /* Image Container */
+        .image-container {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #8F87F1;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#mood">Mood Tracker</a>
+        <a href="#social">Social Safety</a>
+        <a href="parent-dashboard.html">Parental Dashboard</a>
+    </div>
+
+    <!-- Home Section -->
+    <div id="home" class="section">
+        <h1>Welcome to Bloomify</h1>
+        <p>Improve mental fitness with daily challenges and mood tracking.</p>
+        <div class="image-container">
+            <img src="images/home.jpg" alt="Mental Fitness">
+        </div>
+    </div>
+
+    <!-- Mood Tracker Section -->
+    <div id="mood" class="section">
+        <h2>Mood Tracker</h2>
+        <p>Track your daily mood and improve emotional awareness.</p>
+        <button onclick="trackMood()">Track Your Mood</button>
+        <div class="image-container">
+            <img src="images/mood.jpg" alt="Mood Tracking">
+        </div>
+    </div>
+
+    <!-- Social Safety Section -->
+    <div id="social" class="section">
+        <h2>Social Media Safety</h2>
+        <p>Stay safe online with our AI-powered sentiment analysis.</p>
+        <p>Current Risk Level: <strong style="color: green;">Low</strong></p>
+        <div class="image-container">
+            <img src="images/social.jpg" alt="Social Media Safety">
+        </div>
+    </div>
+
+    <!-- Parental Dashboard Section -->
+    <div id="parent" class="section">
+        <h2>Parental Control</h2>
+        <p>Monitor your child's emotional well-being and social activity.</p>
+        <a href="parent-dashboard.html" style="text-decoration: none;">
+            <button style="background: white; color: #8F87F1; padding: 10px; border-radius: 5px; font-weight: bold;">
+                Go to Parental Dashboard
+            </button>
+        </a>
+        <div class="image-container">
+            <img src="images/parent.jpg" alt="Parental Control">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">&copy; 2025 Bloomify. All rights reserved.</div>
+
+    <script>
+        function trackMood() {
+            alert("Mood tracking feature coming soon!");
+        }
+    </script>
+</body>
+</html>
+
