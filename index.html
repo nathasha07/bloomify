@@ -98,10 +98,11 @@
     <!-- Mood Tracker Section -->
     <div id="mood" class="section">
         <h2>Mood Tracker</h2>
-        <p>Track your daily mood and improve emotional awareness.</p>
-        <button onclick="trackMood()">Track Your Mood</button>
-        <div class="image-container">
-            <img src="images/mood.jpg" alt="Mood Tracking">
+        <p>How are you feeling today?</p>
+    <button onclick="trackMood('Happy')">😊 Happy</button>
+    <button onclick="trackMood('Sad')">😢 Sad</button>
+    <button onclick="trackMood('Angry')">😡 Angry</button>
+    <button onclick="trackMood('Calm')">😌 Calm</button>
         </div>
     </div>
 
@@ -136,6 +137,27 @@
         function trackMood() {
             alert("Mood tracking feature coming soon!");
         }
+    async function trackMood(mood) {
+        const moodData = { mood: mood, timestamp: new Date() };
+
+        try {
+            const response = await fetch('http://localhost:5000/moods', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(moodData),
+            });
+
+            if (response.ok) {
+                alert("Mood tracked successfully!");
+            } else {
+                alert("Failed to track mood.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Error connecting to backend.");
+        }
+    }
+
     </script>
 </body>
 </html>
